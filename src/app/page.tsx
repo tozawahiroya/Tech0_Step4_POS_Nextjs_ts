@@ -30,7 +30,8 @@ export default function Home() {
     // console.log(code)
 
     setShowScanner(false); // スキャンが完了したらバーコードリーダーを非表示にする
-    const res = await fetch(process.env.NEXT_PUBLIC_APP_API_URL + "/search_product/",
+    const res = await fetch(
+      "http://127.0.0.1:8000/search_product/",
     {
       method: "POST",
       headers: {
@@ -93,7 +94,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        process.env.NEXT_PUBLIC_APP_API_URL + "http://127.0.0.1:8000/purchase/",
+          "http://127.0.0.1:8000/purchase/",
         {
           method: "POST",
           headers: {
